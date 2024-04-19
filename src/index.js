@@ -1,8 +1,18 @@
 import dropdown from './dropdown.js';
-import  previous from './slider.js';
-import next from './slider.js';
+import slide from './slider.js';
 import './style.css';
 
 const dropMenu = document.querySelector('#nav');
+const slides = document.querySelector('#images');
 
 dropdown(dropMenu, "drop-down", "collapsed");
+
+const prevButton = document.querySelector('#previous');
+prevButton.addEventListener('click', () => {
+    slide(slides, 'prev');
+});
+
+const nextButton = document.querySelector('#next');
+nextButton.addEventListener('click', () => {
+    slide(slides, 'next');
+});

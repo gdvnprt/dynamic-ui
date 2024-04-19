@@ -36,9 +36,9 @@ body div {
 }
 
 #title {
-display: flex;
-justify-content: center;
-align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #body {
@@ -51,6 +51,35 @@ align-items: center;
 
 #slider {
     grid-row: 1 / 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+    overflow: hidden;
+    position: relative;
+    width: 75vh;
+    height: 60vh;
+
+}
+
+#images {
+    position: relative;
+    transition: right 500ms ease-in-out;
+    width: auto;
+    height: 60vh;
+    width: 375vh;
+    display: flex;
+    gap: 0;
+    right: 0vh;
+}
+
+#images img {
+    position: relative;
+    height: 60vh;
+    width: 75vh;
 }
 
 #slide-icons {

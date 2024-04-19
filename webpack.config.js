@@ -1,35 +1,45 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlBundlerPlugin = require('html-bundler-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: {
-    index: './src/index.js',
-    dropdown: './src/dropdown.js',
-    slider: './src/slider.js',
-  },
 
   devtool: 'inline-source-map',
   
   plugins: [
-    new HtmlWebpackPlugin({
-      template: './src/index.html',
-      title: 'Dynamic UI Elements',
+    new HtmlBundlerPlugin({
+      entry: {
+        index: './src/index.html',
+      },
+      js: {
+        // output filename of extracted JS from source script loaded in HTML via `<script>` tag
+        filename: 'js/[name].[contenthash:8].js',
+      },
+      css: {
+        // output filename of extracted CSS from source style loaded in HTML via `<link>` tag
+        filename: 'css/[name].[contenthash:8].css',
+      },
     }),
   ],
-
-  output: {
-    filename: '[name].main.js',
-    path: path.resolve(__dirname, './dist'),
-    clean: true,
-  },
 
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        test: /\.html$/,
+        loader: HtmlBundlerPlugin.loader, // HTML loader
       },
-    ],
+      {
+        test: /\.css$/i,
+        use: ["css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+        generator: {
+            // Note: define output filename of images
+            filename: 'assets/img/[name].[hash:8][ext]',
+        },
+      },
+    ]
   },
 };

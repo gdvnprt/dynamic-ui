@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamic UI Elements</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./index.js" defer></script>
 </head>
 <body>
     <div id="nav" class="collapsed">
@@ -32,8 +34,19 @@
 
     <div id="body">
         <div id="slider">
-            <button id="previous"></button>
-            <button id="next"></button>
+            <button id="previous">&#8678;</button>
+
+            <div id="container">
+                <div id="images">
+                    <img src="./img/01.jpg" alt="A manta ray swimming away from the camera">
+                    <img src="./img/02.jpg" alt="A manta ray viewed from above with a shark below it">
+                    <img src="./img/03.jpg" alt="Several whitetip reef sharks pressed together">
+                    <img src="./img/04.jpg" alt="A manta ray and a diver">
+                    <img src="./img/05.jpg" alt="A manta ray swimming towards the camera">
+                </div>
+            </div>
+
+            <button id="next">&#8680;</button>
         </div>
 
         <div id="slide-icons">
