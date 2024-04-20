@@ -3,7 +3,7 @@ import slide from './slider.js';
 import './style.css';
 
 const dropMenu = document.querySelector('#nav');
-const slides = document.querySelector('#images');
+const slides = document.querySelector('#slides');
 
 dropdown(dropMenu, "drop-down", "collapsed");
 

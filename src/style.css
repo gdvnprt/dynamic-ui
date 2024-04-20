@@ -65,7 +65,7 @@ body div {
 
 }
 
-#images {
+#slides {
     position: relative;
     transition: right 500ms ease-in-out;
     width: auto;
@@ -76,10 +76,11 @@ body div {
     right: 0vh;
 }
 
-#images img {
+#slides img {
     position: relative;
     height: 60vh;
     width: 75vh;
+    border: 0;
 }
 
 #slide-icons {
