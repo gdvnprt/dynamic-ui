@@ -19,6 +19,7 @@ body div {
     display: grid;
     grid-template-columns: 5vw 10vw;
     grid-template-rows: repeat(6, 10vh);
+    z-index: 1;
 }
 
 .nav-item {
