@@ -1,6 +1,5 @@
 import dropdown from './dropdown.js';
 import slide from './slider.js';
-import './style.css';
 
 const dropMenu = document.querySelector('#nav');
 const slides = document.querySelector('#slides');
