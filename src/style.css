@@ -92,11 +92,11 @@ body {
     border-radius: 50%;
     background-color: gray;
     transition: width 500ms ease-in-out, height 500ms ease-in-out;
-};
+}
 
-.small-dot {
-    width: 11px;
-    height: 11px
+.sm-dot {
+    width: 10px;
+    height: 10px;
 }
 
 .large-dot {
