@@ -6,10 +6,6 @@ body {
     grid-template-columns: 1fr;
 }
 
-body div {
-    border: 2px solid black;
-}
-
 #nav {
     position: absolute;
     background-color: aquamarine;
@@ -84,6 +80,26 @@ body div {
     border: 0;
 }
 
-#slide-icons {
+#dots {
     grid-row: 2 / 3;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-dot {
+    border-radius: 50%;
+    background-color: gray;
+    transition: width 500ms ease-in-out, height 500ms ease-in-out;
+};
+
+.small-dot {
+    width: 11px;
+    height: 11px
+}
+
+.large-dot {
+    width: 15px;
+    height: 15px;
 }
